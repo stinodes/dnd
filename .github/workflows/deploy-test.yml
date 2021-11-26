@@ -22,7 +22,7 @@ jobs:
     strategy:
       matrix:
         node-version: [15.x]
-        amplify-cli-version: latest
+        amplify-cli-version: [latest]
 
     env:
       AMPLIFYPROVIDERS: |
