@@ -1,0 +1,82 @@
+
+type Campaign @model {
+  id: ID!
+  name: String!
+  owner: String!
+
+  characters: [Character] @connection(keyName: "byCampaign", fields: ["id"])
+  locations: [Location] @connection(keyName: "byCampaign", fields: ["id"])
+}
+
+type Location @model 
+  @key(name: "byCampaign", fields: ["campaignID"]) 
+  @key(name: "byParentLocation", fields: ["parentLocationID"]) {
+  
+  id: ID!
+  campaignID: ID!
+  parentLocationID: ID
+  name: String!
+
+  map: String
+
+  services: [String]
+
+  notes: [String]
+  characters: [CharacterLocation] @connection(keyName: "byLocation", fields: ["id"])
+  parentLocation: Location @connection(fields: ["parentLocationID"])
+  locations: [Location] @connection(keyName: "byParentLocation", fields: ["id"])
+}
+
+type CharacterLocation 
+  @model(queries: null)
+  @key(name: "byCharacter", fields: ["characterID", "locationID"]) 
+  @key(name: "byLocation", fields: ["locationID", "characterID"]) {
+  id: ID!
+  characterID: ID!
+  locationID: ID!
+  character: Character! @connection(fields: ["characterID"])
+  location: Location! @connection(fields: ["locationID"])
+}
+
+#
+# Character stuff
+#
+type Character @model 
+  @key(name: "byCampaign", fields: ["campaignID"]) {
+  id: ID!
+  campaignID: ID!
+  name: String!
+  race: String
+  gender: String
+  job: String
+
+  appearance: Appearance
+
+  characteristics: Characteristics
+
+  locations: [CharacterLocation] @connection(keyName: "byCharacter", fields: ["id"])
+}
+
+type Characteristics {
+  alignment: String
+  personality: String
+  relationships: [Relationship]
+}
+
+type Relationship {
+  with: Character
+  opinion: String
+}
+
+type Appearance {
+  height: String
+  age: String
+
+  bodyType: String
+
+  hairColor: String
+  hairStyle: String
+
+  features: String
+}
+
