@@ -61,6 +61,8 @@ type Characteristics {
   alignment: String
   personality: String
   relationships: [Relationship]
+  flaws: String
+  goals: String
 }
 
 type Relationship {

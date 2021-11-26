@@ -341,6 +341,8 @@ export const onCreateCharacterLocation = /* GraphQL */ `
         characteristics {
           alignment
           personality
+          flaws
+          goals
         }
         locations {
           nextToken
@@ -405,6 +407,8 @@ export const onUpdateCharacterLocation = /* GraphQL */ `
         characteristics {
           alignment
           personality
+          flaws
+          goals
         }
         locations {
           nextToken
@@ -469,6 +473,8 @@ export const onDeleteCharacterLocation = /* GraphQL */ `
         characteristics {
           alignment
           personality
+          flaws
+          goals
         }
         locations {
           nextToken
@@ -532,6 +538,8 @@ export const onCreateCharacter = /* GraphQL */ `
         relationships {
           opinion
         }
+        flaws
+        goals
       }
       locations {
         items {
@@ -571,6 +579,8 @@ export const onUpdateCharacter = /* GraphQL */ `
         relationships {
           opinion
         }
+        flaws
+        goals
       }
       locations {
         items {
@@ -610,6 +620,8 @@ export const onDeleteCharacter = /* GraphQL */ `
         relationships {
           opinion
         }
+        flaws
+        goals
       }
       locations {
         items {

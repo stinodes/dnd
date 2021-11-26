@@ -103,6 +103,8 @@ export type Characteristics = {
   alignment?: string | null,
   personality?: string | null,
   relationships?:  Array<Relationship | null > | null,
+  flaws?: string | null,
+  goals?: string | null,
 };
 
 export type Relationship = {
@@ -260,6 +262,8 @@ export type CharacteristicsInput = {
   alignment?: string | null,
   personality?: string | null,
   relationships?: Array< RelationshipInput | null > | null,
+  flaws?: string | null,
+  goals?: string | null,
 };
 
 export type RelationshipInput = {
@@ -745,6 +749,8 @@ export type CreateCharacterLocationMutation = {
         __typename: "Characteristics",
         alignment?: string | null,
         personality?: string | null,
+        flaws?: string | null,
+        goals?: string | null,
       } | null,
       locations?:  {
         __typename: "ModelCharacterLocationConnection",
@@ -822,6 +828,8 @@ export type UpdateCharacterLocationMutation = {
         __typename: "Characteristics",
         alignment?: string | null,
         personality?: string | null,
+        flaws?: string | null,
+        goals?: string | null,
       } | null,
       locations?:  {
         __typename: "ModelCharacterLocationConnection",
@@ -899,6 +907,8 @@ export type DeleteCharacterLocationMutation = {
         __typename: "Characteristics",
         alignment?: string | null,
         personality?: string | null,
+        flaws?: string | null,
+        goals?: string | null,
       } | null,
       locations?:  {
         __typename: "ModelCharacterLocationConnection",
@@ -975,6 +985,8 @@ export type CreateCharacterMutation = {
         __typename: "Relationship",
         opinion?: string | null,
       } | null > | null,
+      flaws?: string | null,
+      goals?: string | null,
     } | null,
     locations?:  {
       __typename: "ModelCharacterLocationConnection",
@@ -1024,6 +1036,8 @@ export type UpdateCharacterMutation = {
         __typename: "Relationship",
         opinion?: string | null,
       } | null > | null,
+      flaws?: string | null,
+      goals?: string | null,
     } | null,
     locations?:  {
       __typename: "ModelCharacterLocationConnection",
@@ -1073,6 +1087,8 @@ export type DeleteCharacterMutation = {
         __typename: "Relationship",
         opinion?: string | null,
       } | null > | null,
+      flaws?: string | null,
+      goals?: string | null,
     } | null,
     locations?:  {
       __typename: "ModelCharacterLocationConnection",
@@ -1320,6 +1336,8 @@ export type GetCharacterQuery = {
         __typename: "Relationship",
         opinion?: string | null,
       } | null > | null,
+      flaws?: string | null,
+      goals?: string | null,
     } | null,
     locations?:  {
       __typename: "ModelCharacterLocationConnection",
@@ -1368,6 +1386,8 @@ export type ListCharactersQuery = {
         __typename: "Characteristics",
         alignment?: string | null,
         personality?: string | null,
+        flaws?: string | null,
+        goals?: string | null,
       } | null,
       locations?:  {
         __typename: "ModelCharacterLocationConnection",
@@ -1758,6 +1778,8 @@ export type OnCreateCharacterLocationSubscription = {
         __typename: "Characteristics",
         alignment?: string | null,
         personality?: string | null,
+        flaws?: string | null,
+        goals?: string | null,
       } | null,
       locations?:  {
         __typename: "ModelCharacterLocationConnection",
@@ -1830,6 +1852,8 @@ export type OnUpdateCharacterLocationSubscription = {
         __typename: "Characteristics",
         alignment?: string | null,
         personality?: string | null,
+        flaws?: string | null,
+        goals?: string | null,
       } | null,
       locations?:  {
         __typename: "ModelCharacterLocationConnection",
@@ -1902,6 +1926,8 @@ export type OnDeleteCharacterLocationSubscription = {
         __typename: "Characteristics",
         alignment?: string | null,
         personality?: string | null,
+        flaws?: string | null,
+        goals?: string | null,
       } | null,
       locations?:  {
         __typename: "ModelCharacterLocationConnection",
@@ -1973,6 +1999,8 @@ export type OnCreateCharacterSubscription = {
         __typename: "Relationship",
         opinion?: string | null,
       } | null > | null,
+      flaws?: string | null,
+      goals?: string | null,
     } | null,
     locations?:  {
       __typename: "ModelCharacterLocationConnection",
@@ -2017,6 +2045,8 @@ export type OnUpdateCharacterSubscription = {
         __typename: "Relationship",
         opinion?: string | null,
       } | null > | null,
+      flaws?: string | null,
+      goals?: string | null,
     } | null,
     locations?:  {
       __typename: "ModelCharacterLocationConnection",
@@ -2061,6 +2091,8 @@ export type OnDeleteCharacterSubscription = {
         __typename: "Relationship",
         opinion?: string | null,
       } | null > | null,
+      flaws?: string | null,
+      goals?: string | null,
     } | null,
     locations?:  {
       __typename: "ModelCharacterLocationConnection",

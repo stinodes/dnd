@@ -193,6 +193,8 @@ export const getCharacter = /* GraphQL */ `
         relationships {
           opinion
         }
+        flaws
+        goals
       }
       locations {
         items {
@@ -234,6 +236,8 @@ export const listCharacters = /* GraphQL */ `
         characteristics {
           alignment
           personality
+          flaws
+          goals
         }
         locations {
           nextToken
