@@ -17,7 +17,6 @@ export const LocationForm = ({
   onSubmit,
   initialValues: initialValuesProp,
 }: Props) => {
-  // const isEdit = !!initialValues
   const initialValues: FormValues = initialValuesProp || {
     name: '',
   }
