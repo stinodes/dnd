@@ -5,7 +5,7 @@ import { ButtonLink } from '../components/ButtonLink'
 export const BackButton = ({ href }: { href?: string }) => {
   const navigation = useNavigation()
 
-  const buttonProps = { size: 'circle' as 'circle', bg: 'white' }
+  const buttonProps = { size: 'circle' as 'circle', bg: 'lights.4' }
   const icon = <Icon icon="arrow-left" color="primary" fontSize={20} />
 
   if (href)
