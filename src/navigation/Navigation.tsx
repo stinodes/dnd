@@ -59,7 +59,7 @@ export const Navigation = ({ children }: { children: ReactNode }) => {
   return (
     <Flex width="100vw" height="100vh" bg="lights.4">
       {show && showMenu && <Underlay onClick={() => setShowMenu(false)} />}
-      {show && <SideMenu show={showMenu} />}
+      {show && <SideMenu show={showMenu}></SideMenu>}
       <Layout flex={1}>
         {show && (
           <NavBar>
@@ -67,7 +67,8 @@ export const Navigation = ({ children }: { children: ReactNode }) => {
               <Button
                 size="circle"
                 bg="lights.4"
-                onClick={() => setShowMenu(true)}>
+                onClick={() => setShowMenu(true)}
+              >
                 <Icon icon="menu" color="primary" size={24} />
               </Button>
             </Flex>
