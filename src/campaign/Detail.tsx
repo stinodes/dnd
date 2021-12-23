@@ -14,6 +14,17 @@ const query = `
       id
       name
       owner
+
+      locations {
+          items {
+            name
+          } 
+      }
+      characters {
+          items {
+            name
+          }
+      }
     }
   }
 `
@@ -35,6 +46,11 @@ export const CampaignDetail = () => {
         <ButtonLink size="small" href="create-location">
           <Icon icon="plus" mr={2} />
           Location
+        </ButtonLink>
+
+        <ButtonLink size="small" href="create-character">
+          <Icon icon="plus" mr={2} />
+          Character
         </ButtonLink>
       </Layout>
     </Page>

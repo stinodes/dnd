@@ -7,6 +7,9 @@ export const routes = mount({
   '/campaigns/:campaignId/create-location': lazy(
     () => import('../location/Create'),
   ),
+  '/campaigns/:campaignId/create-character': lazy(
+    () => import('../character/Create'),
+  ),
   '/campaigns/:campaignId': lazy(() => import('../campaign/Detail')),
   '/campaigns': lazy(() => import('../campaign/Overview')),
 })
